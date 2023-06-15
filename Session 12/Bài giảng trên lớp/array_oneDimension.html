@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mảng 1 chiều</title>
+</head>
+
+<body>
+    <script>
+        /*
+            Mảng 1 chiều tổng hợp:
+            - Khai báo mảng chứa giá trị các số
+            - Nhập các giá trị của mảng từ bàn phím, kết thúc khi nhập giá trị âm
+            - In ra các phần từ chia hết cho 3 và 5
+            - In ra phần tử là số nguyên tố
+            - Sắp xếp mảng tăng dần và in ra mảng sau khi sắp xếp
+        */
+        let arrInt = [];
+        let index = 0;
+        do {
+            let number = Number(prompt("Nhập vào một số"));
+            if (number >= 0) {
+                arrInt[index] = number;
+            } else {
+                break;
+            }
+            index++;
+        } while (true);
+        // In ra các phần tử chia hết cho 3 và 5
+        console.log("Các phần tử chia hết cho 3 và 5");
+        for (let index = 0; index < arrInt.length; index++) {
+            if (arrInt[index] % 3 == 0 && arrInt[index] % 5 == 0) {
+                console.log(arrInt[index]);
+            }
+        }
+        // In ra các phần tử là số nguyên tố
+        console.log("Các phần tử là số nguyên tố trong mảng là");
+        for (let index = 0; index < arrInt.length; index++) {
+            //Kiểm tra arrInt[index] có phải là số nguyên tố hay không
+            let checkPrime = true;
+            if (arrInt[index] >= 2) {
+                for (let i = 2; i <= Math.sqrt(arrInt[index]); i++) {
+                    if (arrInt[index] % i == 0) {
+                        checkPrime = false;
+                        break;
+                    }
+                }
+                if (checkPrime) {
+                    console.log(arrInt[index]);
+                }
+            }
+        }
+        //Sắp xếp mảng tăng dần
+        // Cách 1: sử dụng các thuật toán: bubble soft, selection soft, insertion sort
+        // Cách 2: sử dụng hàm sort của array
+    </script>
+</body>
+
+</html>

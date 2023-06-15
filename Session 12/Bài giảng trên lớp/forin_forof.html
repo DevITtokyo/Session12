@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vòng lặp forin và forof</title>
+</head>
+
+<body>
+    <script>
+        let arr = [3, 5, 7, 9];
+        // Duyệt mảng bằng vòng forin và in ra giá trị các phần tử mảng
+        // --> chỉ số phần tử --> key
+        //Vòng 1: key = 0
+        //vòng 2: key = 1
+        //Vòng 3: key = 2
+        //Vòng 4: key = 3 --> kết thúc vòng lặp
+        for (const key in arr) {
+            console.log(arr[key]);
+        }
+        // Duyệt mảng bằng vòng forof và in ra các giá trị của mảng
+        // --> giá trị phần tử --> element
+        // Vòng 1: element = 3
+        // Vòng 2: element = 5
+        // Vòng 3: element = 7
+        // Vòng 5: element = 9 --> kết thúc vòng lặp
+        for (const element of arr) {
+            console.log(element);
+        }
+    </script>
+</body>
+
+</html>

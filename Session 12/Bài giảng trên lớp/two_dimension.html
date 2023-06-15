@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mảng 2 chiều</title>
+</head>
+
+<body>
+    <script>
+        // Khai báo mảng 2 chiều gồm 3 dòng và 2 cột bằng cách array Literal
+        let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]];
+        // row = 4
+        // col = 3
+        // In ra phần tử có chỉ số row = 2, col = 1
+        console.log("Phần tử có chỉ số row = 2, col = 1-->", arr[2][1]);
+        // Duyệt các phần tử của mảng và in ra giá trị các phần tử
+        console.log("Các phần tử trong mảng là: ");
+        // Duyệt theo dòng
+        // for (let i = 0; i < 4; i++) {
+        //     // Duyệt theo cột
+        //     for (let j = 0; j < 3; j++) {
+        //         console.log(arr[i][j]);
+        //     }
+        // }
+        // Duyệt theo dòng
+        for (let i = 0; i < arr.length; i++) {
+            // Duyệt theo cột
+            for (let j = 0; j < arr[i].length; j++) {
+                console.log(arr[i][j]);
+            }
+        }
+        // In ra giá trị các phần tử của mảng
+        console.log(arr);
+        // Khai báo mảng bằng cách array constructor
+        let arrInt = new Array([1, 2, 3], [4, 5, 6]);
+
+    </script>
+</body>
+
+</html>

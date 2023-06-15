@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khai báo mảng</title>
+</head>
+
+<body>
+    <script>
+        // Khai báo mảng gồm 5 phần tử có giá trị lần lượt là 3,5,7,9,10
+        /*
+            Cách 1: khai báo theo kiểu array literal
+            var | let | const arrayName = [item1,item2,...,itemN];
+            -> length: N
+            -> max index: N-1
+            -> item2 -> index = 1
+            -> truy cập và lấy giá trị item2 -> arrayName[1]->return item2
+        */
+        let arrInt = [3, 5, 7, 9, 10];
+        console.log("Độ dài của mảng - length-->", arrInt.length);
+        console.log("Giá trị phần tử có chỉ số là 3-->", arrInt[3]);
+        console.log("Giá trị phần tử có chỉ số là 5-->", arrInt[5]);
+        // In ra giá trị các phần tử trong mảng - duyệt mảng
+        console.log("Các phần tử của mảng là: ");
+        for (let index = 0; index < arrInt.length; index++) {
+            console.log(arrInt[index]);
+        }
+        // Khai báo mảng 1 chiều có tên là arrayStudent gồm 5 phần tử chứa các 
+        // giá trị là: "Lan","Xinh",23, true, "Đẹp"
+        /*
+            Cách 2: Khai báo theo kiểu array constructor
+            var | let | const arrayName = new Array(item1,item2,...,itemN)
+        */
+        let arrayStudent = new Array("Lan", "Xinh", 23, true, "Đẹp");
+        // In ra các phần tử để hiển thị Lan Xinh Đẹp
+        console.log(arrayStudent[0]);
+        console.log(arrayStudent[1]);
+        console.log(arrayStudent[4]);
+        // In ra các phần tử của mảng arrayStudent
+        console.log("Các phần tử trong mảng arrayStudent là: ");
+        for (let index = 0; index < arrayStudent.length; index++) {
+            console.log(arrayStudent[index]);
+        }
+        // Bài 1: Khai báo mảng số nguyên có tên là arrNumber gồm 5 phần tử
+        // có giá trị là2,7,4,9,10. Duyệt mảng và in ra các phần tử có
+        // giá trị là chẵn --> Array Literal
+        /*
+            Bài 2: Khai báo mảng tên arrString gồm các phần tử là "Một","Hai",
+            "Ba","Bốn","Năm". Duyệt mảng và in ra các phần tử có chỉ số là lẻ
+            --> Array Constructor
+        */
+        /*
+            Bài 3: Khai báo mảng, nhập 5 giá trị từ bàn phím và lưu vào mảng.
+            Duyệt mảng và in các phần tử của mảng từ phần tử chỉ số cao --> nhỏ            
+        */
+        //Bước 1: Dùng vòng lặp chạy 5 lần để nhập giá trị số --> lưu vào mảng
+        let arr = [];
+        for (let index = 0; index < 5; index++) {
+            arr[index] = Number(prompt("Nhập vào số thứ " + (index + 1)));
+        }
+        //Bước 2: Duyệt mảng từ cuối --> đầu và in ra các phần tử
+        console.log("Các phần tử trong mảng là: ");
+        for (let index = arr.length - 1; index >= 0; index--) {
+            console.log(arr[index]);
+        }
+        // Khai báo mảng và khởi tạo giá trị cho mảng
+        let arrRa = [];
+        // In ra các phần tử của mảng
+        arrRa[0] = 1;
+        arrRa[1] = 3;
+        arrRa[3] = 10;
+        console.log("Các phần tử trong mảng Ra là: ");
+        for (let index = 0; index < arrRa.length; index++) {
+            console.log(arrRa[index]);
+        }
+        /*
+            Bài 4: Khai báo mảng 1 chiều có tên là arrStudent
+            Nhập các thông tin gồm mã sinh viên, tên sinh viên, tuổi,
+            giới tính, địa chỉ và lưu vào mảng arrStudent
+            In ra thông tin của sinh viên
+        */
+    </script>
+</body>
+
+</html>
